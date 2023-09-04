@@ -1,0 +1,19 @@
+---
+title: "Computer Science 203 Blog"
+title-block-banner: true
+---
+
+Welcome to my website for Allegheny College's Computer Science 203 - Software Development!
+
+The following posts are a collection of articles I wrote throught our software development process
+
+---
+listing: 
+  content: posts
+  type: table
+  categories: true
+  fields: [date,title,subtitle]
+  sort: 
+    - "date"
+    - "title desc"
+---

@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: 2c1cfd6a-bd28-4f4c-afdc-b2f9a33a8c20
+      url: 'https://sweet-axolotl-6880e1.netlify.app'

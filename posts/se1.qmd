@@ -1,0 +1,10 @@
+---
+title: "Software Engineering at Google - 1"
+date: 09/04/2023
+date-format: long
+author: Caleb J. Kendra
+categories: Software Engineering at Google
+subtitle: Programming Over Time
+title-block-banner: true
+---
+
