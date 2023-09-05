@@ -5,5 +5,26 @@
     "title": "Computer Science 203 Blog",
     "section": "",
     "text": "Welcome to my website for Allegheny College’s Computer Science 203 - Software Development!\nThe following posts are a collection of articles I wrote throught our software development process\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nSubtitle\n\n\n\n\n\n\nSep 4, 2023\n\n\nSoftware Engineering at Google - 1\n\n\nProgramming Over Time\n\n\n\n\nSep 4, 2023\n\n\nFuzzing Book - 1\n\n\nIntroduction to Software Testing\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/se1.html",
+    "href": "posts/se1.html",
+    "title": "Software Engineering at Google - 1",
+    "section": "",
+    "text": "Summary\nIn the preface of “Software Engineering at Google” in the Programming Over Time section we are first introduced to the idea that “Software Engineering” is not just the act of creating code, but also the creation of processes that allow us to create maintainable and sustainable code. In this sense, when we release a version of software we created, we don’t want that software to be the final version but rather a building block in which we can improve upon. In order to succseed on this goal of sustainablilty the book is going to emphasize three points to be thinking of while creating software:\n\nTime - We need to plan out how the software we create will change from the start and finish of a certain project\nScale - We also need to plan how we will change our engineering methods as our team of engineers develop.\nCosts- Then we also need to decide on what parts of the project should be prioritized over others.\n\n\n\nReflection\nAs I think about how this section compares to chasten two main points jump out at me. For starters, the scaling of the project is going to be very important in order to make sure our code is created sustainably and on time. Since this project is being developed by a group of students who have for the most part never worked on a project at this scale or at this size of a team, plans are going to be have to laid out carefully. This is so everyone in our team stays on task and knows what they are doing as the project changes and grows in size.\nThe other point I want to make is about the cost of certain features leading to decisions of what should be prioritized. This should also be something we should always be thinking of as well because we only have half a semester do work on chasten’s features and in order to make sure we deliver a functioning product we need to make sure that we are only working on the most important features."
+  },
+  {
+    "objectID": "posts/se1.html#hello-there",
+    "href": "posts/se1.html#hello-there",
+    "title": "Software Engineering at Google - 1",
+    "section": "",
+    "text": "Hello there"
+  },
+  {
+    "objectID": "posts/se1.html#summary",
+    "href": "posts/se1.html#summary",
+    "title": "Software Engineering at Google - 1",
+    "section": "",
+    "text": "In the preface of “Software Engineering at Google” in the Programming Over Time section we are first introduced to the idea that “Software Engineering” is not just the act of creating code, but also the creation of processes that allow us to create maintainable and sustainable code. In this sense, when we release a version of software we created, we don’t want that software to be the final version but rather a building block in which we can improve upon."
   }
 ]

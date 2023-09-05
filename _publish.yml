@@ -1,4 +1,4 @@
 - source: project
   netlify:
     - id: f7a48a10-6fdb-4c9f-b6cb-cc8a28b494f5
-      url: 'https://calebkendra.netlify.app/'
+      url: 'https://calebkendra.netlify.app'
