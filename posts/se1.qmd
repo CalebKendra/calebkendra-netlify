@@ -16,7 +16,7 @@ In the preface of "Software Engineering at Google" in the Programming Over Time 
 
 - Scale - We also need to plan how we will change our engineering methods as our team of engineers develop.
 
-- Costs- Then we also need to decide on what parts of the project should be prioritized over others.
+- Costs - Then we also need to decide on what parts of the project should be prioritized over others.
 
 # Reflection
 
