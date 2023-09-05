@@ -24,3 +24,4 @@ As I think about how this section compares to `chasten` two main points jump out
 
 The other point I want to make is about the cost of certain features leading to decisions of what should be prioritized. This should also be something we should always be thinking of as well because we only have half a semester do work on `chasten`'s features and in order to make sure we deliver a functioning product we need to make sure that we are only working on the most important features.
 
+# Action Items
