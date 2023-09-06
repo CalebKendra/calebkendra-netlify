@@ -37,12 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -91,7 +89,6 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
             <div class="quarto-navbar-tools ms-auto">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -134,7 +131,15 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
+  <li><a href="#action-items" id="toc-action-items" class="nav-link" data-scroll-target="#action-items">Action Items</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -142,8 +147,22 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<section id="summary" class="level1">
+<h1>Summary</h1>
+<p>In the introductory section of the Fuzzing Book titled <code>Introduction to Software Testing</code> the main points that are discussed are about software testing and bug fixing. The first example given about software testing was with a square root function and how we would test this function in order to make sure it gives correct ouputs. The first test they gave was that we could multiply two square root functions together with the same input in both as they should be able to give the input value back, and while this test works, it is not replicatable on a large scale and is not efficient. In order to make this process faster the book then decides to automate testing by using an <code>assert</code> command in order to make sure that the output given from the function is the same as expected. that solution is not bad, but further code is needed in order to make sure that the floating point values work right. to combat this we introduce a epsilon value that ensures there were no rounding errors in the code, and we make this test easily useable by putting it inside a function. This makes it easy to test and confirm that tens of thousands of values are correct all at the same time by iterating through a large group of random numbers.</p>
+<p>The next part of this chapter talks about how we can build test functions into already existing code in order to intuitively check for bugs or misinputs. This includes using <code>try</code> and <code>except</code> statements in order to see if certain errors occur when a certain part of a code is being run, this can tell us what the error is and display this information back to the user. pairing this bit of code with an <code>assert</code> statement allows us to correctly identify what errors our code is running into with certain inputs, and will allow us to more accurately identify an issue.</p>
+<p>Finally, although all these testing programs can be automated and can check for many different types of inputs and errors, there is no guarentee that your code is going to be fully free of errors as there are infinate amounts of inputs and scenarios that can change for your code reacts.</p>
+</section>
+<section id="reflection" class="level1">
+<h1>Reflection</h1>
+<p>Testing is a very important process in software development that can be done with ease if the correct steps are put in place. For example, many different inputs must be tested in order to get a better idea of where a code is doing well and where it is failing. These steps can be automated in order to test many differnet inputs at once by using programs such as <code>random</code> in order to get a wide variety of results. tests can also be built into a program itself in order to check for errors as the code is being run to prevent things such as user error. Yet, in the end not all use cases can be tested fully as in every program there are always going to be edge cases of scenios that were not thought of, causing errors.</p>
+</section>
+<section id="action-items" class="level1">
+<h1>Action Items</h1>
+<p>For me, testing is always something that I needed to improve upon and that was because I often skipped the testing process entierely in order to save time. But on large scale projects such as <code>chasten</code>, it is vital to run tests in order to make sure that the product we are delivering to the world has been tested so that our users are not effected even by the smallest bug that may occur in some scenarios. On the other hand, I have always been one to build edge case tests into my code in order to make sure that certain common errors were not present, such as <code>type</code> different on input to a function i created. I do this in order to make sure there is less user error when calling functions later in the code and this prevents major errors from reoccuring in my code.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -166,121 +185,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
-    }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
-    }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
-      }
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
-      for (const sheetNode of alternateStylesheets) {
-        if (sheetNode.id === "quarto-bootstrap") {
-          toggleBodyColorMode(sheetNode);
-        }
-      }
-    } else {
-      disableStylesheet(alternateStylesheets);
-      toggleBodyColorPrimary();
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455)
-    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-      manageTransitions("body", false);
-      window.scrollTo(0, 1);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        manageTransitions("body", true);
-      }, 40);  
-    }
-  }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
-      return false;
-    }
-  }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  let localAlternateSentinel = 'default';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } else {
-    toggleColorMode(false);
-  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
