@@ -1,0 +1,21 @@
+---
+title: "Fuzzing Book - 2"
+date: 09/11/2023
+date-format: long
+author: Caleb J. Kendra
+categories: Fuzzing Book
+subtitle: Coverage
+title-block-banner: true
+---
+
+# Summary
+
+In order to make sure that a program can get as close to 100% code coverage as possible we use something called a fuzzing check. A fuzzing check generator of a random set of characters that allows us to check many different types of inputs. With these checks, we are able to create a range of possible results for different programs such as the example `cgi_decode` function that is shown to us. This allows us to check what inputs we need in order to get close to perfect code coverage with our tests.
+
+# Reflection
+
+Having a test like this created seems very useful when it comes to checking to make sure you can achieve maximum coverage with random fuzzing inputs. This is a great way to find edge cases, especially in massive programs where there can be many many different inputs. This process however takes a lot of time so it is vital that this process is only done with large programs that cannot be manually checked in order to make sure that you are being most efficient with your time. 
+
+# Action Items
+
+For our `chasten` project I believe that building these tests is very important for `chasten` especially since we are going to be adding many new features throughout the semester so it's vital that we pass coverage before we ship this software out to the world. The problem with this I believe is that we are very very strict on time and we are already struggling to make it through the semester work, so if we were to start building these testing systems we would have to make the decision to dedicate a lot of class time to it.

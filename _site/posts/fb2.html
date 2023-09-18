@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Caleb J. Kendra">
+<meta name="dcterms.date" content="2023-09-11">
 
-<title>Caleb Kendra - Computer Science 203 Blog</title>
+<title>Caleb Kendra - Fuzzing Book - 2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -61,40 +61,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -104,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Caleb Kendra</span>
     </a>
   </div>
@@ -115,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
 </ul>
@@ -129,14 +98,30 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Computer Science 203 Blog</h1>
-                      </div>
+      <h1 class="title">Fuzzing Book - 2</h1>
+            <p class="subtitle lead">Coverage</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Fuzzing Book</div>
+              </div>
+                  </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Caleb J. Kendra </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 11, 2023</p>
+      </div>
+    </div>
     
       
     </div>
@@ -146,110 +131,38 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Fuzzing Book">Fuzzing Book <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Software Engineering at Google">Software Engineering at Google <span class="quarto-category-count">(2)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
+  <li><a href="#action-items" id="toc-action-items" class="nav-link" data-scroll-target="#action-items">Action Items</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
-<p>Welcome to my website for Allegheny College’s Computer Science 203 - Software Development!</p>
-<p>The following posts are a collection of articles I wrote throught our software development process</p>
+<section id="summary" class="level1">
+<h1>Summary</h1>
+<p>In order to make sure that a program can get as close to 100% code coverage as possible we use something called a fuzzing check. A fuzzing check generator of a random set of characters that allows us to check many different types of inputs. With these checks, we are able to create a range of possible results for different programs such as the example <code>cgi_decode</code> function that is shown to us. This allows us to check what inputs we need in order to get close to perfect code coverage with our tests.</p>
+</section>
+<section id="reflection" class="level1">
+<h1>Reflection</h1>
+<p>Having a test like this created seems very useful when it comes to checking to make sure you can achieve maximum coverage with random fuzzing inputs. This is a great way to find edge cases, especially in massive programs where there can be many many different inputs. This process however takes a lot of time so it is vital that this process is only done with large programs that cannot be manually checked in order to make sure that you are being most efficient with your time.</p>
+</section>
+<section id="action-items" class="level1">
+<h1>Action Items</h1>
+<p>For our <code>chasten</code> project I believe that building these tests is very important for <code>chasten</code> especially since we are going to be adding many new features throughout the semester so it’s vital that we pass coverage before we ship this software out to the world. The problem with this I believe is that we are very very strict on time and we are already struggling to make it through the semester work, so if we were to start building these testing systems we would have to make the decision to dedicate a lot of class time to it.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-         <option value="listing-title-sort" data-direction="asc">
-          Title
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
-</th>
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
-</th>
-<th>
-Subtitle
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-categories="Software Engineering at Google" data-listing-date-sort="1693800000000" data-listing-file-modified-sort="1694450245391" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-title-sort="Software Engineering at Google - 1" data-listing-filename-sort="se1.qmd">
-<td>
-<span class="listing-date">Sep 4, 2023</span>
-</td>
-<td>
-<a href="./posts/se1.html" class="title listing-title">Software Engineering at Google - 1</a>
-</td>
-<td>
-<span class="listing-subtitle">Programming Over Time</span>
-</td>
-</tr>
-<tr data-index="1" data-categories="Fuzzing Book" data-listing-date-sort="1693800000000" data-listing-file-modified-sort="1694018188949" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-title-sort="Fuzzing Book - 1" data-listing-filename-sort="fb1.qmd">
-<td>
-<span class="listing-date">Sep 4, 2023</span>
-</td>
-<td>
-<a href="./posts/fb1.html" class="title listing-title">Fuzzing Book - 1</a>
-</td>
-<td>
-<span class="listing-subtitle">Introduction to Software Testing</span>
-</td>
-</tr>
-<tr data-index="2" data-categories="Fuzzing Book" data-listing-date-sort="1694404800000" data-listing-file-modified-sort="1694632022695" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-title-sort="Fuzzing Book - 2" data-listing-filename-sort="fb2.qmd">
-<td>
-<span class="listing-date">Sep 11, 2023</span>
-</td>
-<td>
-<a href="./posts/fb2.html" class="title listing-title">Fuzzing Book - 2</a>
-</td>
-<td>
-<span class="listing-subtitle">Coverage</span>
-</td>
-</tr>
-<tr data-index="3" data-categories="Software Engineering at Google" data-listing-date-sort="1694577600000" data-listing-file-modified-sort="1694632219000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-title-sort="Software Engineering at Google - 2" data-listing-filename-sort="se2.qmd">
-<td>
-<span class="listing-date">Sep 13, 2023</span>
-</td>
-<td>
-<a href="./posts/se2.html" class="title listing-title">Software Engineering at Google - 2</a>
-</td>
-<td>
-<span class="listing-subtitle">What is Software Engineering?</span>
-</td>
-</tr>
-</tbody>
-
-</table>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

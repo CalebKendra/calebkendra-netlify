@@ -1,0 +1,31 @@
+---
+title: "Software Engineering at Google - 2"
+date: 09/13/2023
+date-format: long
+author: Caleb J. Kendra
+categories: Software Engineering at Google
+subtitle: What is Software Engineering?
+title-block-banner: true
+---
+
+# Summary
+
+The section `What is Software Engineering` in the book `Software Engineering at Google` goes over the basics and common misconceptions about what software engineering truly is. A good first example of this is the misconception that programming is the same as software engineering and this is simply not true. While software engineering does include programming, it mostly entails the planning behind how you will build sustainable software in a team. The major ideas you will be thinking about in this process include how big in scale this project will be, what features you want to prioritize first, or who you want to assign to each subject. 
+
+Thinking about how long a software engineering project will go on is one of the most important when thinking about the longevity of a project. For example, if a team wants to create a program that will last for decades they need to plan out the times they will work to upgrade that program as they know that this program will need to adapt to keep up with technology in the future. Another example of this is Hyrum's law which states: 
+
+> With a sufficient number of users of an API, it does not matter what you promise in the contract: all observable behaviors of your system will be depended on by somebody
+
+This tells us that with enough users of an API, someone will be relying on the feature that you implemented into it. So if someone depends on every feature that you made, how can you change or upgrade them in the future? This is why you must strive to build code that is upgradeable so you can build upon previous updates to further flesh out features that you've made. 
+
+Another big distinction between software engineering and programming is the scale in which you have to change your codebase or engineers. Put simply, as a project grows or shrinks in size the scale in which your entire company needs to change as well. For example, if your company gains thousands of new customers, you are going to need to make sure your software processes can handle that level of growth alongside it. Another example of a scaling upgrade would be to the hardware that your engineers use which could increase productivity especially if those processes had not been updated in a long time. Yet not everything needs to scale as a company grows, for example, a feature or library your engineers use may be strong enough that it doesn't matter the size of your company as It does the same work nonetheless.
+
+Finally, the idea of tradeoffs is massive in software engineering because it tells what we should allocate our precious resources to first. Tradeoffs are not just for deciding what software engineers should be programming with their time, but also for other costs such as financial and resource costs. A simple example of this would be the tradeoff that Google made to buy markers for their whiteboards. They decided that the financial cost was worth it to buy markers so their engineers could jot their ideas down on boards. A more complex example would be deciding on creating one feature vs. another feature if you only have time for one before a deadline, so software engineers have to think about that tradeoff to decide what is worth it and what is not.
+
+# Reflection
+
+There are clearly some massive differences between software engineering and programming as programming is simply one small step in the massive software engineering puzzle. Software engineering encompasses so many high-level decisions that are made in order to give a piece of software sustainability in the short or long period of time it is active. Software should be able to respond to changes in many different factors such as scale, time, technology, and policy. These factors should all be accounted for when first building the code to ensure your code is maintainable in the future. 
+
+# Action Items
+
+I see this section relating to our code in CMPSC 203 as we need to start thinking about how the code changes we make now will affect us down the line when we wish to add new features and make `chasten` a better final product. In this sense, we also need to start writing more notes and planning out how we will make code adaptable to future updates. Another thing I believe we need to think about more is time trade-offs as we do not have a lot of time in class and so we need to be much more efficient with it.
