@@ -1,0 +1,18 @@
+---
+title: "Fuzzing Book - 3"
+date: 09/20/2023
+date-format: long 
+author: Caleb J. Kendra
+categories: Fuzzing Book
+subtitle: Fuzzing
+title-block-banner: true
+---
+
+# Summary
+
+This section discusses the use of "Fuzzers" or programs that create random sections of numbers, letters, and symbols in order to create a random test. We can use this program in order to test files for certain random inputs. Fuzzing checks help find many differnet errors and edge cases in software in order to make sure of your programs security and reliability. Many of the bugs that you fuzzers will find revolve around the the types of inputs that are given since many pieces of software has not tested all possible inputs but with a fuzzer it is alot easier to check a wide variety of commands. With this method we can test many different inputs very quickly by using a fuzzer.
+
+# Action & Reflection
+
+These fuzzing checks could be very usefull to impliment into our code because it would allow us to check many different types of texts at once. This could be very useful for `chasten` becasue this way we could check many different sections of code with many linting checks in order to make sure that `chasten` can find all these different types of text and inputs. In order for this to happen however, we would need to start seriously upping our testing as right now we dont have alot of testing going on to make sure that all of these things can be accounted for.
+

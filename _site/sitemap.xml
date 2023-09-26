@@ -2,22 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://calebkendra.netlify.app/index.html</loc>
-    <lastmod>2023-09-13T19:11:46.387Z</lastmod>
+    <lastmod>2023-09-21T18:26:29.509Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calebkendra.netlify.app/posts/fb3.html</loc>
+    <lastmod>2023-09-21T18:26:28.613Z</lastmod>
   </url>
   <url>
     <loc>https://calebkendra.netlify.app/posts/fb2.html</loc>
-    <lastmod>2023-09-13T19:11:45.835Z</lastmod>
+    <lastmod>2023-09-21T18:26:27.978Z</lastmod>
   </url>
   <url>
     <loc>https://calebkendra.netlify.app/posts/se1.html</loc>
-    <lastmod>2023-09-13T19:11:45.059Z</lastmod>
+    <lastmod>2023-09-21T18:26:27.226Z</lastmod>
   </url>
   <url>
     <loc>https://calebkendra.netlify.app/posts/fb1.html</loc>
-    <lastmod>2023-09-13T19:11:45.447Z</lastmod>
+    <lastmod>2023-09-21T18:26:27.690Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calebkendra.netlify.app/posts/se3.html</loc>
+    <lastmod>2023-09-21T18:26:28.238Z</lastmod>
   </url>
   <url>
     <loc>https://calebkendra.netlify.app/posts/se2.html</loc>
-    <lastmod>2023-09-13T19:11:46.111Z</lastmod>
+    <lastmod>2023-09-21T18:26:29.021Z</lastmod>
   </url>
 </urlset>

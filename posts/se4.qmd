@@ -1,0 +1,21 @@
+---
+title: "Software Engineering at Google - 4"
+date: 09/26/2023
+date-format: long
+author: Caleb J. Kendra
+categories: Software Engineering at Google
+subtitle: Knowledge Sharing
+title-block-banner: true
+---
+
+# Summary
+
+In software development, It is curcial that you learn how to communicatae your issues within your own team because those team members are more likely to know the solution as they are working on the same project as you. This can be difficult for a number of reasons however such as fear of making a mistake, a single member not sharing their section of the codebase, or large broken sections of code to name a few. 
+
+There are a few different ways we can look to solve this problem and they all revolve around forms of communication. The best form of this communication has a large level of documentation paried with individuals who can apply this information to individuals and their needs. This allows for lots of information to be stored but also for individuals with problems to have coworkers ready to help them for their unique case. With these levels of communication in place we also need to give room for individuals to feel comfortable asking questions, and thats why its important to assign new members with mentors to be able to have one on one interaction with and ask questions. This will allow for new memebers of the team to grow into their role and eventually mentor others as they have the ability to ask questions through various platforms.
+
+Overall, to have a successfull level of communication as a software engineering team you need to make information and mentorship easy and comfortable to access. New members need to feel comfortable going up to higher level engineers and asking questions so they too can become become familar with the system. Finally, there is no one solution to communication because although methods like documentation are great, communicating effectively with others requires multiple levels of information that vary between online and in person services in order to make information flow effectively.
+
+# Action & Reflection
+
+This article is very important for the work we are doing on `chasten` as we need to be able to communicate effectively in the small amount of time we have together each week. Overall we have done an okay job of this but I beleive we could improve on these with a few changes. Alot of time when working on `chasten` I believe we struggle to make information widely avaliable especially when it comes to our individual pull requests and issues, this can cause alot of problems for a few reasons. For one, this information will be lost if a member is sick or leaves the team and we will have to start again from scratch. Then, even if the issue is solved by this single person, others will still have to review the information. This means that if an error was present from the start of the change, then the pull request will have to be scrapped and potentally redone. To fix problems like this, we should greate smaller teams that allow for members to discuss the changes they are making and find a solution to these problems.

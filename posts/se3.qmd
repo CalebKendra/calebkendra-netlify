@@ -1,0 +1,22 @@
+---
+title: "Software Engineering at Google - 3"
+date: 09/18/2023
+date-format: long
+author: Caleb J. Kendra
+categories: Software Engineering at Google
+subtitle: How to Work Well on Teams.
+title-block-banner: true
+---
+
+# Summary
+
+This section of the book `Software Engineering at Google` starts by talking about programmers and "The Genius Myth". This is the idea that every programmer has in the back of their head where they think that they can hide their code away and work on it alone for months until one day they release it to the world to become famous for their brilliant code. The reality of the situation is that this is very improbable, programmers need to be able to not only work together but also be willing to make mistakes and show their thought processes to the world in order to get the best out of their software.
+
+One of the biggest reasons to not keep your code private is that you need other people to see your ideas and give feedback on them. This will allow for new modifications to your code that could be vital for progress down the line. For example, if someone suggests a design change early on in the process then you could fix something that would be a major problem had you not fixed it early on. Another reason to not keep your code private is what's called the bus factor, or the idea that one member of a team could leave suddenly. If this happens, and there is no documentation for the software that this person built, then the rest of the team is going to be stuck with a large section of code that nobody understands. Working in a group will remediate this problem as if multiple people have worked on the same code segment then you can easily pick up where others left off. Finally, a single person could be able to write thousands of lines of code in a day, but even someone that smart would not be able to make that code clean and testable all in one day. An entire team of software engineers would be able to write and test efficient code all at once. Working in a large team can also help alleviate bugs and other design flaws that someone writing many lines of code would not be able to do.
+
+Now that we are all on one page about working in a Software Engineering team, what do we do in this team? Well, there are three main pillars to be able to work socially with this team: Humility, Respect, and Trust. Being able to work for a team rather than for yourself is the key idea here, as every member of the team needs to be able to contribute to a project as one. One of the best ways to do this is to learn to take and give criticism about your work and others, this way you can improve and learn from your mistakes in order to not make them later on. In the same sense making mistakes is also one of the best ways to be better as a team as other people realizing you made a mistake can prove to be a valuable lesson to you in the future. Overall, being open to change and being willing to work with others are some of the best attributes you can have as a Software Engineer.
+
+# Action & Reflection
+
+For our current project, `chasten`, it is vital that we implement these ideas as we need to be able to work effectively together as a team. On that same hand, we need to make sure that our engineers are not working on projects alone without reaching out for help as they will run into all the same problems that the people in this book did. It is vital that as a team we share what we are doing and the mistakes we made so that as a team we can learn from these experiences. We need to stop being so private with what we are working on and create a larger schedule to make sure we know what everyone is doing and how we can help our colleagues out.
+

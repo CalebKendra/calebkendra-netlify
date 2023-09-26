@@ -1,0 +1,17 @@
+---
+title: "Fuzzing Book - 4"
+date: 09/26/2023
+date-format: long 
+author: Caleb J. Kendra
+categories: Fuzzing Book
+subtitle: Mutation Analysis
+title-block-banner: true
+---
+
+# Summary
+
+The section `mutation analysis` covers the idea of creating programs that can test our test cases. Often we will find that ineffective testing can cause 100% test coverage but at the same time will be because of ineffective testing that means our tests ability to catch bugs is actually 0%. In order to fix this we can create mutation analysis programs that edit our code to create temporary but effective errors in order to test our test cases ability to find bugs. 
+
+# Action & Reflection
+
+
