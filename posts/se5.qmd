@@ -1,0 +1,19 @@
+---
+title: "Software Engineering at Google - 5"
+date: 10/12/2023
+date-format: long
+author: Caleb J. Kendra
+categories: Software Engineering at Google
+subtitle: Engineering for Equity
+title-block-banner: true
+---
+
+# Summary
+
+This section talks about how engineers often don't account for other types of people when considering how to build software. It is important that engineers not only know how to code but also to be morally concious about what they make. It is important for engineers to consider that the tools they build may take lots of sensitive data that could be effecting millions of people. It is not only the responsability of the employers but also the employees to make sure that there is a focus on product equity to users over profit margins to shareholders in order to promote underepresented groups.
+
+It is not only good enough to make sure that an equitable amount of different people are hired to each company but it is also vital to make sure that each member of these companies is in an equal working enviroment. For example, a company needs to do more then just make sure they hire enough women, but they also need to make sure that they will have a comfortable and inclusive working enviroment at least on par with all other members of that company. Overall, a better work enviroment for all will lead to a more positive and productive experience for all involved and so it is vital that all are accomidated.
+
+# Action & Reflection
+
+From this section I can see that it is vital to accomidate all people in order to best accomidate groups that have not been as well accomidated. discrimination based on traits leads to a negative and less productive enviroment that will lead to underpreforming members. This is why it is best to accomidate all people in order to best build a strong enviroment for all people to thrive at your company and break down structural biases that are common in society. In our project we can bring in many of these practices to allow for people who may not have fit in with the current structure of work and allow those people to be successfull.

@@ -1,0 +1,19 @@
+---
+title: "Fuzzing Book - 5"
+date: 10/11/2023
+date-format: long 
+author: Caleb J. Kendra
+categories: Fuzzing Book
+subtitle: Mutation Fuzzer
+title-block-banner: true
+---
+
+# Summary
+
+When attempting to fuzz programs that can accept more then just random inputs such as a website url, it is vital that we change our fuzzer in order to create realistic looking but incorrect urls in order to test a function based around website urls. If we try to pass random inputs into a function such as this it could take years in order to get a correct http url in order to correctly test the function. A good way to change inputs would be to take correct inputs and change certain characters around to make the url incorrect but very close to being correct.
+
+Using this strategy, we are able to create many different variations of inputs, then, when we pair these many inputs with a runner function we are able to make sure that every line of the tested function is covered. Combining all these ideas into a `mutation fuzzing` function allows us to combine all the previous tasks we learned in `mutation analysis`, `code coverage`, and `fuzzing`.
+
+# Action & Reflection
+
+This article discusses the combination of all of the previous information that we learned and applies it to one function called `mutation fuzzing`. It is vital that we start implimenting these ideas into our test cases in order to make sure that all the differenet types of `XPATH` expressions are covered. With `mutation fuzzing` we can apply these things very quickly at a massive scale in order to impliement tests that we could never do outselves if we were tests on our own.  

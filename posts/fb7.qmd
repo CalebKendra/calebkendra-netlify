@@ -1,0 +1,33 @@
+---
+title: "Fuzzing Book - 7"
+date: 10/26/2023
+date-format: long 
+author: Caleb J. Kendra
+categories: Fuzzing Book
+subtitle: Efficient Grammar Fuzzing
+title-block-banner: true
+---
+
+# Summary
+
+In this section we discuss the fact that, the old function we used in `Fuzzing
+Book` called `simple_grammar_fuzzer` was was first of all not very efficient
+and the time complexity was very bad when dealing with large inputs, and
+secondly was often incorrect with the amount of symbols or parathases that it
+gave off. In order to fix this we can start by building something called a
+deviation tree which tracks the pathways that the grammars take in order to
+create thier final output. We can use these deviation trees to be able to
+track the costs of each grammar statement. This allows us to set the amount
+of times that we want the grammar to expand and when we want the grammer to
+cut back and end. This allows us to set the size of the input rather then
+have a random size input. This allows us to control the time that is taken to
+evaluate all these inputs as you are able to limit the size that is being fed
+into the function.
+
+# Action & Reflection
+
+The addition of deviation trees allows for the limitation of the size of
+grammar fuzzing which allows it to become a viable testing technique as it is
+able to control the size of the input. Without this limitation the grammar
+fuzzing could go on forever which would take a lot more time then without
+them as the inputs would be much smaller. Overall this change would be greate for using in inputs as you would be able to confirm that your inputs will not be super long and will be able to be done in time.

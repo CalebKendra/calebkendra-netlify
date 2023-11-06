@@ -1,0 +1,45 @@
+---
+title: "Fuzzing Book - 6"
+date: 10/19/2023
+date-format: long 
+author: Caleb J. Kendra
+categories: Fuzzing Book
+subtitle: Fuzzing with Grammer
+title-block-banner: true
+---
+
+# Summary
+
+This chapter intoduces the `Grammer` which is a way to map symbols in order to create string combinations in structured but randomized ways. This allows us to make complex but controlled string inputs that can be inputted in to different functions. For example:
+
+```python
+US_PHONE_GRAMMAR: Grammar = {
+     "<start>": ["<phone-number>"],
+     "<phone-number>": ["(<area>)<exchange>-<line>"],
+     "<area>": ["<lead-digit><digit><digit>"],
+     "<exchange>": ["<lead-digit><digit><digit>"],
+     "<line>": ["<digit><digit><digit><digit>"],
+     "<lead-digit>": ["2", "3", "4", "5", "6", "7", "8", "9"],
+     "<digit>": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+}
+```
+
+This grammer defines a phone number creator which works by defining lead digits and digits for each of the three sections of a phone number, then sets the lead digit and digit to be 2-9 and 0-9, respectively. This creates a set but random number generator in a consise and easy to read way in order to generate random inputs. 
+
+This can be used in certain ways such as inputting grammers into mutation fuzzing in order to specifiy better seed inputs such as with:
+
+```python
+from MutationFuzzer import MutationFuzzer
+number_of_seeds = 10
+seeds = [
+    simple_grammar_fuzzer(
+        grammar=URL_GRAMMAR,
+        max_nonterminals=10) for i in range(number_of_seeds)]
+m = MutationFuzzer(seeds)
+```
+
+This function gives off 10 urls from `URL_GRAMMAR` which can then be placed into a mutation fuzzer that can cause bugs in those seeded inputs. This allows us to create testable inputs from start to finish with a mutation fuzzer, allowing for a great amount of code coverage.
+
+# Action & Reflection
+
+As I said previously, the addition of grammars allows for the mutation fuzzing section we read before to be complete. Previously when we used mutation fuzzing we needed to give it a seeded input that was correct in order for it to change that input using mutation. Now with grammars we are able to create those seeded input automatically and then use them in mutation analysis in order to create a large amount of test inputs in order to test all the various inputs that our function could get. This process could be used for many things in `chasten`, the first thing that comes to mind is in the `xpath` expressions where a grammar for `xpath` expressions could be built then mutation analysis would be built from there. 

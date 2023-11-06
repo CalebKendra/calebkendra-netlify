@@ -1,0 +1,66 @@
+---
+title: "Software Engineering at Google - 7"
+date: 10/26/2023
+date-format: long
+author: Caleb J. Kendra
+categories: Software Engineering at Google
+subtitle: Leading at Scale
+title-block-banner: true
+---
+
+# Summary
+
+In the previous chapter of `Software Engineering at Google` called `How to
+Lead a Team` we dealt with problems of being a manager and how to be come a
+good leader of a team. In this section we deal with the problems that come
+with leading a large team that can not be helped in detail but has to be done
+at a macro level. Most of the time as a large teams manager you will be
+responsible for leading your team through at a very high up level by making
+trade offs and decisions. There are a few ways that you can help your team
+move through an issue:
+
+- Identify the blinders that were previously holding your team back from
+  innovating on a change.
+- Identify the trade offs for what should and shouldn't be done.
+- Iterate through new ideas in order to continuely rebalance the trade offs to
+  find what best fits.
+
+The next goal you should have is to build a self driving team that is able to
+work on its own and you can leave without much side effect. This will
+minimize the `bus factor`, or the concept that you should minimize the amount
+of knowlage that will be lost of one person is hit by a bus and it out of
+work. This problem can be solved by creating subteams that tackle subproblems
+of a larger problem. This will ensure that each section of code has multiple
+people working on it and it able to be tackled with individual leaders, this
+was you are not the source of all knowledge for each problem.
+
+The final point given is to always be scaling, or changing the size of your
+team in order to adjust for different time needs. Often you need to adapt to
+make sure that your team can fit in a certain deadline for a project
+depending on how big it may be. The biggest idea is to make sure that you are
+not overwhelming your team or yourselve while trying to tackle a big issue.
+
+# Action & Reflection
+
+The biggest idea I pulled from this section was the idea that:
+
+> This is what good management is about: 95% observation and listening, and 5%
+  making critical adjustments in just the right place. 
+
+This idea can be applied to many different sections of management as you have
+to be able to not micromanage your teams every move as this will cause alot
+more disruption then its worth. Instead you should be lisening and watching
+what your team is doing and reacting based on that information that is given
+to you. This is a very worthwhile tip that allows your workers to be able to
+work but also to recieve key insights without their work being managed every
+day. This style will also allow you to see what your team needs and make key
+tradeoff and scaling decisions that will make your that your team can work as
+efficiently as possible.
+
+This section does not apply to us in the `chasten` project a lot since it
+deals with leadership and we do not have a set leader that is suppost to give
+us tasks as we are suppost to give ourselves work to do. In a real work
+enviroment you would have a boss to tell each engineer what problem should be
+fixed but in our enviroment we are suppost to be working in small groups in
+order to fix issues or add feature on our own in order to create the
+`chasten` tool. 

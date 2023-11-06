@@ -1,0 +1,21 @@
+---
+title: "Software Engineering at Google - 8"
+date: 11/03/2023
+date-format: long
+author: Caleb J. Kendra
+categories: Software Engineering at Google
+subtitle: Style Guide and Rules
+title-block-banner: true
+---
+
+# Summary
+
+This section of `Software Engineering at Google` talks about rules and where they should be applied in order to get the best out of your code. Rules help place guidelines on what should be encouraged and what should be left out. These guidelines also help a company reflect on certain decisions that they value in order to help place those guidelines on their workers. 
+
+Without a good rule set, codebases become unmanageable and have no organizable pattern so it is vital to be able to standardize how your project and company is run. One of the best ways to do this is to write a style guide to ensure that everyone at a company is on the same page when it comes to how programs should be carried out.
+
+Overall, creating a strong set of rules that can be easily followed but also allow for a consistant set of policys in your workplace is vital. Rules will become the basis of how your team goes about future project and will allow for stead production into the future.
+
+# Action & Reflection
+
+This section applies to our `chasten` project a lot since alot of the time our team is not on the same page and so having a consise set of rules could help alot. For instance, if we had more rules pertaining to how pull requests are approved and how work should be done then we could have a much more consistant and efficient team that can make detailed changes faster. Changes like this would put everyone on our team on the same page without having to go through a cumbersome process to beg team members to help with certain aspects of team based software engineering.

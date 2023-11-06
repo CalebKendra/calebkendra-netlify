@@ -1,0 +1,44 @@
+---
+title: "Fuzzing Book - 8"
+date: 11/03/2023
+date-format: long 
+author: Caleb J. Kendra
+categories: Fuzzing Book
+subtitle: Parsing Inputs
+title-block-banner: true
+---
+
+# Summary
+
+For certain times when you are fuzzing a grammar fuzzer is not simply good enough to create one grammar as there are rules to the input you are putting in. The way we fix this is by using a parser in order to take a string input and turn it into a derivation tree. This can be done with a PED (predicate expression grammar) parser that will parse until it finds one rule that matches its query such as:
+
+```python
+class PEGParser(Parser):
+    def parse_prefix(self, text):
+        cursor, tree = self.unify_key(self.start_symbol(), text, 0)
+        return cursor, [tree]
+```
+
+This would be fine, but in many cases we want to find all matches in which would would need a CFG (context-free grammar) parser. This allows for all parts of an input to be matched while parsing such as:
+
+
+```python
+class CFGParser(CGFParser):
+    def parse(self, text):
+        cursor, states = self.parse_prefix(text)
+        start = next((s for s in states if s.finished()), None)
+
+        if cursor < len(text) or not start:
+            raise SyntaxError("at " + repr(text[cursor:]))
+
+        forest = self.parse_forest(self.table, start)
+        for tree in self.extract_trees(forest):
+            yield self.prune_tree(tree)
+```
+
+# Action & Reflection
+
+These parsers are the best next step to be able to easily create deriviation trees from certain seeded inputs. This allows us to know what grammars are needed to be able to simulate inputs for future fuzzing testing. This further automates the taking of inputs to be able to fuzz future inputs.
+
+
+This can be used in `chasten` by the utilizing PED and CFG to enhance the tool's performance by importing and easily implementing these parsers. These parsers create concise branched grammars, resulting in faster grammar processing times. integrating more complex parsers, allows for the composition of grammars and the introduction of finer details without impacting external structures or significance in the program.
