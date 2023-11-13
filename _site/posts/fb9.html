@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Caleb J. Kendra">
-<meta name="dcterms.date" content="2023-11-03">
+<meta name="dcterms.date" content="2023-11-13">
 
-<title>Caleb Kendra - Software Engineering at Google - 8</title>
+<title>Caleb Kendra - Fuzzing Book - 9</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -98,10 +132,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Software Engineering at Google - 8</h1>
-            <p class="subtitle lead">Style Guide and Rules</p>
+      <h1 class="title">Fuzzing Book - 9</h1>
+            <p class="subtitle lead">Reducing Failure-Inducing Inputs</p>
                                 <div class="quarto-categories">
-                <div class="quarto-category">Software Engineering at Google</div>
+                <div class="quarto-category">Fuzzing Book</div>
               </div>
                   </div>
   </div>
@@ -119,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 3, 2023</p>
+        <p class="date">November 13, 2023</p>
       </div>
     </div>
     
@@ -148,13 +182,52 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="summary" class="level1">
 <h1>Summary</h1>
-<p>This section of <code>Software Engineering at Google</code> talks about rules and where they should be applied in order to get the best out of your code. Rules help place guidelines on what should be encouraged and what should be left out. These guidelines also help a company reflect on certain decisions that they value in order to help place those guidelines on their workers.</p>
-<p>Without a good rule set, codebases become unmanageable and have no organizable pattern so it is vital to be able to standardize how your project and company is run. One of the best ways to do this is to write a style guide to ensure that everyone at a company is on the same page when it comes to how programs should be carried out.</p>
-<p>Overall, creating a strong set of rules that can be easily followed but also allow for a consistant set of policys in your workplace is vital. Rules will become the basis of how your team goes about future project and will allow for stead production into the future.</p>
+<p>This section of <code>Fuzzing Book</code> deals with ideas based around cutting down on the size of mutated inputs so that users can more easily identify what inputs cause errors. This means that very long and confusing inputs can be made into simple statements that show what inputs cause errors. For example a fuzzed input could look something like this at its full length:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>7:,&gt;((/$$-/-&gt;.;.=;(.%!:50#7*8=$&amp;&amp;=$9!%6(4=&amp;69\':\'&lt;3+0-3.24#7=!&amp;60)2/+";+&lt;7+1&lt;2!4$&gt;92+$1&lt;(3%&amp;5\'\'&gt;#</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If this statement were to give an error messege after testing it would be difficult to find out what section the error occured in. This is where <strong> delta debugging </strong> comes into place as we are able to cut down on this input until it looks something like this:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Test #1 ' 7:,&gt;((/$$-/-&gt;.;.=;(.%!:50#7*8=$&amp;&amp;=$9!%6(4=&amp;69\':\'&lt;3+0-3.24#7=!&amp;60)2/+";+&lt;7+1&lt;2!4$&gt;92+$1&lt;(3%&amp;5\'\'&gt;#' 97 FAIL</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>Test #2 '\'&lt;3+0-3.24#7=!&amp;60)2/+";+&lt;7+1&lt;2!4$&gt;92+$1&lt;(3%&amp;5\'\'&gt;#' 49 PASS</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>Test #3 " 7:,&gt;((/$$-/-&gt;.;.=;(.%!:50#7*8=$&amp;&amp;=$9!%6(4=&amp;69':" 48 PASS</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>Test #4 '50#7*8=$&amp;&amp;=$9!%6(4=&amp;69\':\'&lt;3+0-3.24#7=!&amp;60)2/+";+&lt;7+1&lt;2!4$&gt;92+$1&lt;(3%&amp;5\'\'&gt;#' 73 FAIL</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>Test #5 "50#7*8=$&amp;&amp;=$9!%6(4=&amp;69':&lt;7+1&lt;2!4$&gt;92+$1&lt;(3%&amp;5''&gt;#" 49 PASS</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>Test #6 '50#7*8=$&amp;&amp;=$9!%6(4=&amp;69\':\'&lt;3+0-3.24#7=!&amp;60)2/+";+' 48 FAIL</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>Test #7 '\'&lt;3+0-3.24#7=!&amp;60)2/+";+' 24 PASS</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>Test #8 "50#7*8=$&amp;&amp;=$9!%6(4=&amp;69':" 24 PASS</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>Test #9 '9!%6(4=&amp;69\':\'&lt;3+0-3.24#7=!&amp;60)2/+";+' 36 FAIL</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>Test #10 '9!%6(4=&amp;69\':=!&amp;60)2/+";+' 24 FAIL</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>Test #11 '=!&amp;60)2/+";+' 12 PASS</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>Test #12 "9!%6(4=&amp;69':" 12 PASS</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>Test #13 '=&amp;69\':=!&amp;60)2/+";+' 18 PASS</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>Test #14 '9!%6(4=!&amp;60)2/+";+' 18 FAIL</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>Test #15 '9!%6(42/+";+' 12 PASS</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>Test #16 '9!%6(4=!&amp;60)' 12 FAIL</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>Test #17 '=!&amp;60)' 6 PASS</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>Test #18 '9!%6(4' 6 PASS</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>Test #19 '6(4=!&amp;60)' 9 FAIL</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>Test #20 '6(460)' 6 FAIL</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>Test #21 '60)' 3 PASS</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>Test #22 '6(4' 3 PASS</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>Test #23 '(460)' 5 FAIL</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>Test #24 '460)' 4 PASS</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>Test #25 '(0)' 3 FAIL</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>Test #26 '0)' 2 PASS</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>Test #27 '(' 1 PASS</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>Test #28 '()' 2 FAIL</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>Test #29 ')' 1 PASS</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>'()'</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In this case we were able to shrink the input by using a divide and conquer method in order to find what specific section of code is causing the failure.</p>
+<p>While this method works for long strings, there are some inputs that this method does not work with. For example if we were working with inputs as mathmatical expressions then delta debugging would cut out key parts of equations. This is where we could introduce <strong> grammars and derivation trees </strong> in order to define each section of an input and parse it down find where the failure is. With an input of:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>1 + (2 * 3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This would look something like:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Test #1 '(2 * 3)' 7 FAIL</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>Test #2 '(3)' 3 FAIL</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>Test #3 '3' 1 PASS</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>'(3)'</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This section showed us that our reducer is able to quickly find the statement inside of the equation without cutting it in half as it is able to identify the sections of the expressions that are connected with grammars.</p>
 </section>
 <section id="action-reflection" class="level1">
 <h1>Action &amp; Reflection</h1>
-<p>This section applies to our <code>chasten</code> project a lot since alot of the time our team is not on the same page and so having a consise set of rules could help alot. For instance, if we had more rules pertaining to how pull requests are approved and how work should be done then we could have a much more consistant and efficient team that can make detailed changes faster. Changes like this would put everyone on our team on the same page without having to go through a cumbersome process to beg team members to help with certain aspects of team based software engineering.</p>
+<p>When using fuzzing inputs its great to see that there is a way to quickly find the sections of inputs that cause errors are this is a great way to be able to save even more time while using test cases. To be able to run tests and find exactly where your function will give an error massively cuts down on one of the biggest issues with fuzzing and that is the time that it takes to fix the many errors it gives. Identification of these specific problems allows us to come up with broader solutions to problems, leading to smarter solutions that last.</p>
 
 
 </section>
