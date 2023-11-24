@@ -1,0 +1,21 @@
+---
+title: "Debugging Book - 1"
+date: 11/21/2023
+date-format: long 
+author: Caleb J. Kendra
+categories: Debugging Book
+subtitle: Introduction to Debugging
+title-block-banner: true
+---
+
+# Summary
+
+This is the first section in the `Debugging Book` and it introduces us to the first ideas based around debugging broken functions. The section first talks about common bad code practices such as making print statements everywhere, making random changes, and hard coding in very specific code inputs. Instead of these methods, it is good code practice to search through your code carefully to identify root causes for errors and build changes that will last instead of temporary fixes.
+
+To be able to do this effectively, you must be able to derive specific issues from an overall exception failure. This requires us to find out what mistake we made from a generalized overall error in the function, and to do this we need to create, edit, and refute our own hypothesises about why the program is broken. This will allow us to run tests based on these questions, from here we can use these results to find a correlated issues that need to be fixed.
+
+After the correlated issue has been found, it is a good idea to make sure that the test cases that failed to find this issue are updated to ensure a greater level of coverage. This will help ensure that this function will not give another error when it is next updated. Finally, keeping a log of all of these steps will help you track back and remember steps and ideas that have you have already been through.
+
+# Action & Reflection
+
+Many of these steps are already steps that I take in fixing bugs but one of the big takeaways I got from this article was the creation of a hypothesis as to why certain functions fail. The higher level of documentationn and process for each individual issue is something that could be very helpfull for me as I try to take on large issues, it will also help when others attempt to help fix this issue with me. Overall a greater level of detail when our team is looking to fix issues will go a long way.
