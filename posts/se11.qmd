@@ -1,0 +1,21 @@
+---
+title: "Software Engineering at Google - 11"
+date: 12/03/2023
+date-format: long
+author: Caleb J. Kendra
+categories: Software Engineering at Google
+subtitle: Testing Overview
+title-block-banner: true
+---
+
+# Summary
+
+This section reflects on testing and how Google impliments it into their work. A test can be defined by an output or behavior you are checking to make sure works correctly. Google impliments many of these tests as automated programs to be able to test their large codebase for errors. They do this because it is simply unrealistic to be able to efficiently test all parts of a large program manually. These automated tests allow for much more confidence in the code given which facilitates a overall smoother development process.
+
+When designing tests, one of the biggests first questions to ask is what size should this test be/how many processes should it cover? The size can be broken down to three sections: small tests coveraging one process, medium tests covering a single machine, and large tests running on however many machines or processes they want. Another question to ask is about the scope of your test and how much code is being validated by a given tests. Google as a guideline likes to enforce that a majority of their code be covered by narrower scope tests in order to have more targeted tests. This is because larger tests are often weaker and take longer to run so are often not as effective as smaller tests would be. 
+
+Finally, Google stresses the idea that "If you liked it, you should put a test on it". This means that features that are stronger or more promanant to break should be made sure to be tested in order to have a larger amount of test coverage. At the same time Google stresses the idea that test coverage should not be the be all end all of testing. This is because when focusing on test coverage rather then quality tests engineers often make tests that do not test for all possible scenarios and rather make tests that cover just enough scenarios to enforce test coverage.
+
+# Action & Reflection
+
+Overall the ideas about testing implimented here are very helpful and could be used well in our project `chasten`. We have made large and small scale test in our project but I believe that the most important insight in this article is to focus on not just improving test coverage but also to make quality tests that can enforce many different inputs. This can be done well by focusing on key functions with fuzzing tests that give many example inputs.

@@ -1,0 +1,17 @@
+---
+title: "Debugging Book - 3"
+date: 12/06/2023
+date-format: long 
+author: Caleb J. Kendra
+categories: Debugging Book
+subtitle: Assertions
+title-block-banner: true
+---
+
+# Summary
+
+
+
+# Action & Reflection
+
+

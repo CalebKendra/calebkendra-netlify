@@ -1,0 +1,52 @@
+---
+title: "Debugging Book - 2"
+date: 12/03/2023
+date-format: long 
+author: Caleb J. Kendra
+categories: Debugging Book
+subtitle: Tracing Executions
+title-block-banner: true
+---
+
+# Summary
+
+This section of `Debugging Book` talks about tracers and how they can be used to look at variables and how their states have changed throughout sections of code. A good example of this is:
+
+```txt
+return 255 remove_html_markup {'s': 'abc', 'tag': False, 'quote': False, 'out': 'abc', 'c': 'c'}
+```
+
+A simple tracer here would be able to track the used variables as the program progresses. This is useful when attempting to debug the program as you can see how all of the different variables react with one another. A more in depth version of this would look like this:
+
+```txt
+243     for c in s:
+                                         # c = '/'
+244         assert tag or not quote
+246         if c == '<' and not quote:
+248         elif c == '>' and not quote:
+250         elif (c == '"' or c == "'") and tag:
+252         elif not tag:
+243     for c in s:
+                                         # c = 'b'
+244         assert tag or not quote
+246         if c == '<' and not quote:
+248         elif c == '>' and not quote:
+250         elif (c == '"' or c == "'") and tag:
+252         elif not tag:
+243     for c in s:
+                                         # c = '>'
+244         assert tag or not quote
+246         if c == '<' and not quote:
+248         elif c == '>' and not quote:
+249             tag = False
+                                         # tag = False
+243     for c in s:
+255     return out
+remove_html_markup() returns 'x'
+```
+
+This method tracks the program and reports every time the variables have been changed which allows us to see each instance of a change. This method is in-depth but at the same time, it can take a lot more time than just running the program normally. To close this distance between the original function and the traced function we can introduce static code injection. This version of tracing injects the code into sections to only trace the parts of the functions that need to be traced which severely lowers the time it takes to run the program. 
+
+# Action & Reflection
+
+Overall tracing a program is a very good method to be able to track the outputs of individual functions to be able to debug. Being able to track how all of the variables interact with each other is very helpful. At the same time, It is very inefficient to run a tracer for every output because of the time that It takes to track all the variables. This is why it would be very helpful to implement a tracers into our project but only when the program has errors.
