@@ -2,86 +2,106 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://calebkendra.netlify.app/index.html</loc>
-    <lastmod>2023-11-24T17:24:03.787Z</lastmod>
+    <lastmod>2023-12-07T14:09:39.038Z</lastmod>
   </url>
   <url>
     <loc>https://calebkendra.netlify.app/posts/se7.html</loc>
-    <lastmod>2023-11-24T17:24:02.947Z</lastmod>
+    <lastmod>2023-12-07T14:09:38.446Z</lastmod>
   </url>
   <url>
     <loc>https://calebkendra.netlify.app/posts/se2.html</loc>
-    <lastmod>2023-11-24T17:24:02.207Z</lastmod>
+    <lastmod>2023-12-07T14:09:38.006Z</lastmod>
   </url>
   <url>
     <loc>https://calebkendra.netlify.app/posts/se3.html</loc>
-    <lastmod>2023-11-24T17:24:01.767Z</lastmod>
+    <lastmod>2023-12-07T14:09:37.606Z</lastmod>
   </url>
   <url>
-    <loc>https://calebkendra.netlify.app/posts/fb6.html</loc>
-    <lastmod>2023-11-24T17:24:00.959Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calebkendra.netlify.app/posts/fb8.html</loc>
-    <lastmod>2023-11-24T17:24:00.387Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calebkendra.netlify.app/posts/fb2.html</loc>
-    <lastmod>2023-11-24T17:23:59.932Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calebkendra.netlify.app/posts/se5.html</loc>
-    <lastmod>2023-11-24T17:23:59.200Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calebkendra.netlify.app/posts/se10.html</loc>
-    <lastmod>2023-11-24T17:23:58.648Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calebkendra.netlify.app/posts/se1.html</loc>
-    <lastmod>2023-11-24T17:23:58.072Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calebkendra.netlify.app/posts/db1.html</loc>
-    <lastmod>2023-11-24T17:23:57.300Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calebkendra.netlify.app/posts/fb9.html</loc>
-    <lastmod>2023-11-24T17:23:57.748Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calebkendra.netlify.app/posts/se8.html</loc>
-    <lastmod>2023-11-24T17:23:58.352Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calebkendra.netlify.app/posts/fb7.html</loc>
-    <lastmod>2023-11-24T17:23:58.920Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calebkendra.netlify.app/posts/fb1.html</loc>
-    <lastmod>2023-11-24T17:23:59.524Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calebkendra.netlify.app/posts/fb4.html</loc>
-    <lastmod>2023-11-24T17:24:00.184Z</lastmod>
+    <loc>https://calebkendra.netlify.app/posts/se11.html</loc>
+    <lastmod>2023-12-07T14:09:37.186Z</lastmod>
   </url>
   <url>
     <loc>https://calebkendra.netlify.app/posts/fb5.html</loc>
-    <lastmod>2023-11-24T17:24:00.579Z</lastmod>
+    <lastmod>2023-12-07T14:09:36.790Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calebkendra.netlify.app/posts/db3.html</loc>
+    <lastmod>2023-12-07T14:09:36.398Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calebkendra.netlify.app/posts/fb2.html</loc>
+    <lastmod>2023-12-07T14:09:36.018Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calebkendra.netlify.app/posts/se12.html</loc>
+    <lastmod>2023-12-07T14:09:35.566Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calebkendra.netlify.app/posts/se5.html</loc>
+    <lastmod>2023-12-07T14:09:34.986Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calebkendra.netlify.app/posts/se10.html</loc>
+    <lastmod>2023-12-07T14:09:34.606Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calebkendra.netlify.app/posts/se8.html</loc>
+    <lastmod>2023-12-07T14:09:34.190Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calebkendra.netlify.app/posts/fb9.html</loc>
+    <lastmod>2023-12-07T14:09:33.786Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calebkendra.netlify.app/posts/db1.html</loc>
+    <lastmod>2023-12-07T14:09:33.446Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calebkendra.netlify.app/posts/se1.html</loc>
+    <lastmod>2023-12-07T14:09:33.994Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calebkendra.netlify.app/posts/db4.html</loc>
+    <lastmod>2023-12-07T14:09:34.370Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calebkendra.netlify.app/posts/fb7.html</loc>
+    <lastmod>2023-12-07T14:09:34.782Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calebkendra.netlify.app/posts/db2.html</loc>
+    <lastmod>2023-12-07T14:09:35.374Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calebkendra.netlify.app/posts/fb1.html</loc>
+    <lastmod>2023-12-07T14:09:35.826Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calebkendra.netlify.app/posts/fb4.html</loc>
+    <lastmod>2023-12-07T14:09:36.222Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calebkendra.netlify.app/posts/fb8.html</loc>
+    <lastmod>2023-12-07T14:09:36.602Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calebkendra.netlify.app/posts/fb6.html</loc>
+    <lastmod>2023-12-07T14:09:36.994Z</lastmod>
   </url>
   <url>
     <loc>https://calebkendra.netlify.app/posts/se6.html</loc>
-    <lastmod>2023-11-24T17:24:01.359Z</lastmod>
+    <lastmod>2023-12-07T14:09:37.386Z</lastmod>
   </url>
   <url>
     <loc>https://calebkendra.netlify.app/posts/fb3.html</loc>
-    <lastmod>2023-11-24T17:24:01.987Z</lastmod>
+    <lastmod>2023-12-07T14:09:37.782Z</lastmod>
   </url>
   <url>
     <loc>https://calebkendra.netlify.app/posts/se4.html</loc>
-    <lastmod>2023-11-24T17:24:02.563Z</lastmod>
+    <lastmod>2023-12-07T14:09:38.214Z</lastmod>
   </url>
   <url>
     <loc>https://calebkendra.netlify.app/posts/se9.html</loc>
-    <lastmod>2023-11-24T17:24:03.363Z</lastmod>
+    <lastmod>2023-12-07T14:09:38.678Z</lastmod>
   </url>
 </urlset>

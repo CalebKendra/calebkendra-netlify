@@ -10,9 +10,12 @@ title-block-banner: true
 
 # Summary
 
+The intro to the section about statistical debugging talks about the process of debugging a program that passes sometimes and fails other times. The best way to fix this program would be to find the lines of code that run whenever the program fails but do not run when the program passes, this way we can find out of these lines of code contains bugs or not, shortening the debugging process. We can use a collector function to track all the lines executed when a function is run with a certain input. This way we can find out the different in lines executed when the function is given a passing vs a failing input. 
 
+We can judge certain lines of code by how many times they are running in a large set of failing inputs vs a passing input. This is called ranking lines by suspiciousness in order to find out what line is most likely to but the failing line. Then with a program like a discrete or continuous spectrum we can highlight the line of code that is most likely to have a bug in it. 
+
+There are some other methods we can use to be able to do statistical debugging other then using code coverage such as using variables and their changes to see what variables change to what input when a failing run happens. Another method would be to use a simple training algorithm to give positive or negative values to certain lines to be able to find out what line is giving an error. 
 
 # Action & Reflection
 
-
-
+These methods are very helpful to be able to find where certain programs are failing and can save a lot of time when debugging. I'm not sure where a test case such as these ones would fit into the code, but I am sure that they would be very useful to be able to find certain spots were a section of code gives an error specially when working with a codebase that is the size of `chasten`'s.

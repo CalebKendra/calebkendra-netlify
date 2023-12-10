@@ -10,7 +10,14 @@ title-block-banner: true
 
 # Summary
 
+This chapter talks about the concept of unit tests and how to maintain them over a long term. A bad test can cause engineers big headaches when it comes to the fixing of issues that these brittle tests give off. One way to help fix these broken tests is to strive to make a test base that never needs to be changed. This is because test cases should always be making sure that a function takes and gives off a certain output so the methods in which this is achieved should not be changed. Making sure that functions are not refactored in a way that changes the functions overall functionality, keeping the tests functional. A good step to make sure that your tests would not need to be changed is to test the public version of your program rather then the private version. The idea here is that you can test the version the public would get in order to make sure that the product you are giving off is give the correct results. 
 
+Another way to test effectively would be to run what are called state test that check the state of the system itself to see the overall change after running a program. An example of this would be a test that adds a user to a database, a state test would make sure that there was a change in that database to show that the function did in fact add the user. 
+
+Writing clear tests is another way to make them stronger. A test that has detailed notes and a clear purpose secures its place in the system as other engineers know exactly what it does. This also helps engineers who fail that test case with their code as it allows for a engineer to identify the issue they produced quicker.
+
+The final idea to keep in mind to write solid unit tests are to focus on DRY or "Don't repeat yourself". This is the idea that you don't want to repeat tests or functions in code as it takes up excess memory and clutters the test suite. Instead tests should be DAMP or have "Descriptive and Meaningful Phrases" meaning that tests should be larger and more in depth rather then having two tests that are very similar with slight deviations. 
 
 # Action & Reflection
 
+All of theses points are very helpful when considering how to make test cases in a large program. The point I brought to heart most was the idea of DRY and not repeating yourself. These ideas are very important as it makes sense to try to make tests as in depth as possible while still focusing on one area of code that you are trying to test. I believe we can implement these ideas into `chasten` a lot more efficiently as we look to make sure that test cases are not only concise but also not repeated.

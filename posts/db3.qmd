@@ -10,8 +10,10 @@ title-block-banner: true
 
 # Summary
 
+This beginning of this article talks about a new way to verify a statement is true called assertion statements. These statements check if the given statement or variable is true. These statements are very useful when attempting to test whether certain aspects of your code work or not. These assert statements do not have to be put in a test case and can simply be put in a function to make sure that it will run correctly. One way of doing this is to put asserts at the start of your program to check if the inputs to your function are correct and follow the right format. These assert statement are very helpful when trying to debug a large collection of functions that all that use other functions outputs as inputs. A good way of checking this format is by using something called a `red-black-tree`. 
 
+The next section of the article talks about memory usage and how to make sure to limit it to make sure your program runs as efficient as possible. One of the best ways to do this is to write assertions to manage your memory so you can keep track of how much has been allocated and initialized. This helps us track where memory is going first to be able to detect memory errors, allowing us to find out how to allocate memory more efficiently.
 
 # Action & Reflection
 
-
+Assertions are something that we can use a lot more of while we are working as a team because they are simple ways to be able to make sure that programs are running the way they should. They allow us to track where parts of programs are going without lots of effort as many assertions take only one line. They should not be used as replacements in our code for real test cases but they can help a lot when dealing with simple debugging errors.
